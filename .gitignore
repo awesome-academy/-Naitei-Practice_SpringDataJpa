@@ -1,3 +1,13 @@
+/-Naitei-Practice_SpringDataJpa.iml
+
+.idea/
+
+.smarttomcat
+
+target
+
+application.properties
+
 # Compiled class file
 *.class
 

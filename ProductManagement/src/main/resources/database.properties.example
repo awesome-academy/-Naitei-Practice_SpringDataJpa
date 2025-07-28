@@ -1,0 +1,4 @@
+jdbc.driverClassName=com.mysql.cj.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/spring_jpa_practice?createDatabaseIfNotExist=true
+jdbc.username=username
+jdbc.password=password

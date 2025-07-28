@@ -3,4 +3,14 @@ package com.example.repository;
 import com.example.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface StudentRepository extends JpaRepository<Student, Long> {}
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.util.Optional;
+
+public interface StudentRepository extends JpaRepository<Student, Long> {
+
+    @Query("SELECT s FROM Student s JOIN FETCH s.courses WHERE s.id = :id")
+    Optional<Student> findByIdWithCourses(@Param("id") Long id);
+
+}

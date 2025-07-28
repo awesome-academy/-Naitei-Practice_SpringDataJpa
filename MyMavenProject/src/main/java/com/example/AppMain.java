@@ -1,68 +1,86 @@
 package com.example;
 
-import com.example.entity.Student;
 import com.example.config.AppConfig;
 import com.example.entity.Course;
-import com.example.repository.StudentRepository;
+import com.example.entity.Student;
 import com.example.repository.CourseRepository;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import com.example.repository.StudentRepository;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class AppMain {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        // Initialize repositories
         StudentRepository studentRepository = context.getBean(StudentRepository.class);
         CourseRepository courseRepository = context.getBean(CourseRepository.class);
 
-        // CRUD operations for Student
-        // Create
-        Student student = new Student(1L, "John Doe", 20);
+        // ----- CREATE -----
+        Course java = new Course(null, "Java Programming", "JAVA101");
+        Course python = new Course(null, "Python Basics", "PY101");
+
+        courseRepository.save(java);
+        courseRepository.save(python);
+        System.out.println("✅ Created Courses");
+
+        Set<Course> courses = new HashSet<>();
+        courses.add(java);
+        courses.add(python);
+
+        Student student = new Student(null, "John Doe", 20);
+        student.setCourses(courses);
+
+        // Thiết lập liên kết 2 chiều
+        java.getStudents().add(student);
+        python.getStudents().add(student);
+
         studentRepository.save(student);
-        System.out.println("Created Student: " + student.getName());
+        System.out.println("✅ Saved student with courses");
 
-        // Read
-        Student foundStudent = studentRepository.findById(1L).orElse(null);
-        System.out.println("Found Student: " + (foundStudent != null ? foundStudent.getName() : "Not found"));
+        Long studentId = student.getId(); // Lưu lại ID để đọc lại
+        Long pythonCourseId = python.getId(); // Lưu lại ID của course để dùng khi xóa
 
-        // Update
+        // ----- READ -----
+        Student foundStudent = studentRepository.findByIdWithCourses(studentId).orElse(null);
+
+        if (foundStudent != null) {
+            System.out.println("📘 Found Student: " + foundStudent.getName());
+            System.out.println("📚 Courses enrolled:");
+            foundStudent.getCourses().forEach(c -> System.out.println(" - " + c.getTitle()));
+        }
+
+        // ----- UPDATE -----
         if (foundStudent != null) {
             foundStudent.setAge(21);
             studentRepository.save(foundStudent);
-            System.out.println("Updated Student Age: " + foundStudent.getAge());
+            System.out.println("🔁 Updated Student Age to: " + foundStudent.getAge());
         }
 
-        // Delete
+        // ----- DELETE COURSE FROM STUDENT -----
+        if (foundStudent != null) {
+            Course courseToRemove = courseRepository.findByIdWithStudents(pythonCourseId).orElse(null);
+
+            if (courseToRemove != null) {
+                foundStudent.getCourses().remove(courseToRemove);
+                courseToRemove.getStudents().remove(foundStudent); // bidirectional
+                studentRepository.save(foundStudent);
+                System.out.println("❌ Removed course PY101 from student");
+            }
+        }
+
+        // ----- DELETE STUDENT -----
         if (foundStudent != null) {
             studentRepository.delete(foundStudent);
-            System.out.println("Deleted Student with ID: " + foundStudent.getId());
+            System.out.println("🗑️ Deleted Student: " + foundStudent.getName());
         }
 
-        // CRUD operations for Course
-        // Create
-        Course course = new Course(1L, "Java Programming", "JAVA101");
-        courseRepository.save(course);
-        System.out.println("Created Course: " + course.getTitle());
+        // ----- DELETE ALL COURSES -----
+        courseRepository.deleteAll();
+        System.out.println("🗑️ Deleted all courses");
 
-        // Read
-        Course foundCourse = courseRepository.findById(1L).orElse(null);
-        System.out.println("Found Course: " + (foundCourse != null ? foundCourse.getTitle() : "Not found"));
-
-        // Update
-        if (foundCourse != null) {
-            foundCourse.setCode("JAVA102");
-            courseRepository.save(foundCourse);
-            System.out.println("Updated Course Code: " + foundCourse.getCode());
-        }
-
-        // Delete
-        if (foundCourse != null) {
-            courseRepository.delete(foundCourse);
-            System.out.println("Deleted Course with ID: " + foundCourse.getId());
-        }
-
-        // Close context
         ((AnnotationConfigApplicationContext) context).close();
     }
 }

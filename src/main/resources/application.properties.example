@@ -1,0 +1,9 @@
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+db.driver=your_database_driver
+db.url=your_database_url
+db.username=your_username
+db.password=your_password
+hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+hibernate.hbm2ddl.auto=none
+hibernate.show_sql=true

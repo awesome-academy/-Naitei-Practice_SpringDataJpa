@@ -1,0 +1,23 @@
+[33mcommit 3e8ed3003b84e408aedc0541248e48b4b0aed2d7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mduynb_practice-spring-data-jpa[m[33m, [m[1;31morigin/duynb_practice-spring-data-jpa[m[33m)[m
+Author: duynguyen <nguyenbaduy011@gmail.com>
+Date:   Tue Jul 29 10:12:06 2025 +0700
+
+    refactor: read database config from application.properties
+
+[33mcommit 848c908f05790e30154ce6d51311aa231c8e7d85[m
+Author: duynguyen <nguyenbaduy011@gmail.com>
+Date:   Tue Jul 29 09:44:28 2025 +0700
+
+    feat: add get all user API
+
+[33mcommit 3cc7f84d2bae746672c8f02883410c956820fd42[m
+Author: duynguyen <nguyenbaduy011@gmail.com>
+Date:   Mon Jul 28 14:43:41 2025 +0700
+
+    feat: complete module user
+
+[33mcommit d92729784904a0d579be5c38ef786f3e9d20ba1a[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: vanvtt-0952 <49464465+vanvtt-0952@users.noreply.github.com>
+Date:   Fri Jul 25 08:10:28 2025 +0700
+
+    Initial commit

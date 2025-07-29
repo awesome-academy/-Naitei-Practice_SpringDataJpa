@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.example.service.CourseServiceTest" time="3.465" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="22"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="E:\CV\Ttap Sun\Projects\-Naitei-Practice_SpringDataJpa\target\test-classes;E:\CV\Ttap Sun\Projects\-Naitei-Practice_SpringDataJpa\target\classes;C:\Users\tuanm\.m2\repository\org\springframework\spring-context\6.2.7\spring-context-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-aop\6.2.7\spring-aop-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-beans\6.2.7\spring-beans-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-core\6.2.7\spring-core-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-jcl\6.2.7\spring-jcl-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-expression\6.2.7\spring-expression-6.2.7.jar;C:\Users\tuanm\.m2\repository\io\micrometer\micrometer-observation\1.14.7\micrometer-observation-1.14.7.jar;C:\Users\tuanm\.m2\repository\io\micrometer\micrometer-commons\1.14.7\micrometer-commons-1.14.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-orm\6.2.7\spring-orm-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-jdbc\6.2.7\spring-jdbc-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-tx\6.2.7\spring-tx-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\data\spring-data-jpa\3.2.3\spring-data-jpa-3.2.3.jar;C:\Users\tuanm\.m2\repository\org\springframework\data\spring-data-commons\3.2.3\spring-data-commons-3.2.3.jar;C:\Users\tuanm\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\tuanm\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.0.0\jakarta.annotation-api-2.0.0.jar;C:\Users\tuanm\.m2\repository\org\slf4j\slf4j-api\2.0.2\slf4j-api-2.0.2.jar;C:\Users\tuanm\.m2\repository\org\hibernate\orm\hibernate-core\7.0.6.Final\hibernate-core-7.0.6.Final.jar;C:\Users\tuanm\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\tuanm\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\tuanm\.m2\repository\org\hibernate\models\hibernate-models\1.0.0\hibernate-models-1.0.0.jar;C:\Users\tuanm\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\tuanm\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\tuanm\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\tuanm\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\tuanm\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\tuanm\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\tuanm\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\tuanm\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\tuanm\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\tuanm\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\tuanm\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.2.0\jakarta.persistence-api-3.2.0.jar;C:\Users\tuanm\.m2\repository\com\mysql\mysql-connector-j\8.4.0\mysql-connector-j-8.4.0.jar;C:\Users\tuanm\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;C:\Users\tuanm\.m2\repository\org\slf4j\slf4j-simple\2.0.2\slf4j-simple-2.0.2.jar;C:\Users\tuanm\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\tuanm\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\tuanm\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\tuanm\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\tuanm\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\tuanm\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\tuanm\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\tuanm\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-test\6.1.2\spring-test-6.1.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Saigon"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="22"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="E:\D\Download\jdk-22_windows-x64_bin\jdk-22.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Users\tuanm\AppData\Local\Temp\surefire6454506830258413497\surefirebooter-20250729152825532_3.jar C:\Users\tuanm\AppData\Local\Temp\surefire6454506830258413497 2025-07-29T15-28-25_417-jvmRun1 surefire-20250729152825532_1tmp surefire_0-20250729152825532_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="E:\CV\Ttap Sun\Projects\-Naitei-Practice_SpringDataJpa\target\test-classes;E:\CV\Ttap Sun\Projects\-Naitei-Practice_SpringDataJpa\target\classes;C:\Users\tuanm\.m2\repository\org\springframework\spring-context\6.2.7\spring-context-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-aop\6.2.7\spring-aop-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-beans\6.2.7\spring-beans-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-core\6.2.7\spring-core-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-jcl\6.2.7\spring-jcl-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-expression\6.2.7\spring-expression-6.2.7.jar;C:\Users\tuanm\.m2\repository\io\micrometer\micrometer-observation\1.14.7\micrometer-observation-1.14.7.jar;C:\Users\tuanm\.m2\repository\io\micrometer\micrometer-commons\1.14.7\micrometer-commons-1.14.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-orm\6.2.7\spring-orm-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-jdbc\6.2.7\spring-jdbc-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-tx\6.2.7\spring-tx-6.2.7.jar;C:\Users\tuanm\.m2\repository\org\springframework\data\spring-data-jpa\3.2.3\spring-data-jpa-3.2.3.jar;C:\Users\tuanm\.m2\repository\org\springframework\data\spring-data-commons\3.2.3\spring-data-commons-3.2.3.jar;C:\Users\tuanm\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\tuanm\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.0.0\jakarta.annotation-api-2.0.0.jar;C:\Users\tuanm\.m2\repository\org\slf4j\slf4j-api\2.0.2\slf4j-api-2.0.2.jar;C:\Users\tuanm\.m2\repository\org\hibernate\orm\hibernate-core\7.0.6.Final\hibernate-core-7.0.6.Final.jar;C:\Users\tuanm\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\tuanm\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\tuanm\.m2\repository\org\hibernate\models\hibernate-models\1.0.0\hibernate-models-1.0.0.jar;C:\Users\tuanm\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\tuanm\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\tuanm\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\tuanm\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\tuanm\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\tuanm\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\tuanm\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\tuanm\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\tuanm\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\tuanm\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\tuanm\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.2.0\jakarta.persistence-api-3.2.0.jar;C:\Users\tuanm\.m2\repository\com\mysql\mysql-connector-j\8.4.0\mysql-connector-j-8.4.0.jar;C:\Users\tuanm\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;C:\Users\tuanm\.m2\repository\org\slf4j\slf4j-simple\2.0.2\slf4j-simple-2.0.2.jar;C:\Users\tuanm\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\tuanm\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\tuanm\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\tuanm\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\tuanm\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\tuanm\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\tuanm\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\tuanm\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\tuanm\.m2\repository\org\springframework\spring-test\6.1.2\spring-test-6.1.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\tuanm"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="E:\D\Download\jdk-22_windows-x64_bin\jdk-22.0.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="E:\CV\Ttap Sun\Projects\-Naitei-Practice_SpringDataJpa"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\tuanm\AppData\Local\Temp\surefire6454506830258413497\surefirebooter-20250729152825532_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="22.0.2+9-70"/>
+    <property name="user.name" value="tuanm"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\tuanm\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\tuanm\AppData\Local\Temp\"/>
+    <property name="java.version" value="22.0.2"/>
+    <property name="user.dir" value="E:\CV\Ttap Sun\Projects\-Naitei-Practice_SpringDataJpa"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="E:\D\Download\jdk-22_windows-x64_bin\jdk-22.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\msys64\ucrt64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\MySQL;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Docker\Docker\resources\bin;e:\Tai lieu cac mon\Nam 2\Ki he nam 2\Kiem thu\Baitap\Oracle_JDK-23&apos;;C:\Program Files\dotnet\;E:\D\Download\jdk-22_windows-x64_bin\jdk-22.0.2\bin;E:\D\Download\apache-maven-3.9.11\bin;E:\D\Download\apache-jmeter-5.6.3\bin;E:\D\Download\jdk-22_windows-x64_bin\jdk-22.0.2\include;C:\msys64\ucrt64\bin;C:\Users\tuanm\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\tuanm\AppData\Local\Programs\Python\Python312\;C:\Users\tuanm\AppData\Local\Microsoft\WindowsApps;C:\Users\tuanm\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\tuanm\AppData\Local\Programs\Python\Python312;C:\Users\tuanm\AppData\Local\Programs\Python\Python312\Scripts;C:\Program Files\Redis;C:\Program Files\MySQL;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\nodejs;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Docker\cli-plugins;C:\Program Files\Docker\Docker\frontend;e:\Tai lieu cac mon\Nam 2\Ki he nam 2\Kiem thu\Baitap\Oracle_JDK-23&apos;;C:\Program Files\JetBrains\IntelliJ IDEA 2025.1.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.3\bin;;E:\D\Download\apache-maven-3.9.11\bin;E:\D\Download\jdk-22_windows-x64_bin\jdk-22.0.2\bin;E:\D\Download\jdk-22_windows-x64_bin\jdk-22.0.2\include;E:\D\Download\apache-jmeter-5.6.3\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="22.0.2+9-70"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="66.0"/>
+  </properties>
+  <testcase name="testGetInstructorById" classname="org.example.service.CourseServiceTest" time="0.067">
+    <system-out><![CDATA[Hibernate: 
+    select
+        i1_0.id,
+        i1_0.email,
+        i1_0.name 
+    from
+        Instructor i1_0 
+    where
+        i1_0.id=?
+]]></system-out>
+    <system-err><![CDATA[[main] INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[main] INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 3 JPA repository interfaces.
+[main] WARN org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'appConfig' of type [org.example.config.AppConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [exceptionTranslation] is declared through a non-static factory method on that class; consider declaring it as static instead.
+Jul 29, 2025 3:28:26 PM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+INFO: HHH000204: Processing PersistenceUnitInfo [name: default]
+Jul 29, 2025 3:28:26 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate ORM core version 7.0.6.Final
+[main] INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+Jul 29, 2025 3:28:27 PM org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl constructDialect
+WARN: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+Jul 29, 2025 3:28:27 PM org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator logConnectionInfo
+INFO: HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/elearning_test?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+Jul 29, 2025 3:28:28 PM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[main] INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[main] INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+]]></system-err>
+  </testcase>
+  <testcase name="testGetAllCourses" classname="org.example.service.CourseServiceTest" time="0.053">
+    <system-out><![CDATA[Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.instructor_id,
+        c1_0.title 
+    from
+        Course c1_0
+Hibernate: 
+    select
+        i1_0.id,
+        i1_0.email,
+        i1_0.name 
+    from
+        Instructor i1_0 
+    where
+        i1_0.id=?
+Hibernate: 
+    select
+        i1_0.id,
+        i1_0.email,
+        i1_0.name 
+    from
+        Instructor i1_0 
+    where
+        i1_0.id=?
+Hibernate: 
+    select
+        i1_0.id,
+        i1_0.email,
+        i1_0.name 
+    from
+        Instructor i1_0 
+    where
+        i1_0.id=?
+Hibernate: 
+    select
+        i1_0.id,
+        i1_0.email,
+        i1_0.name 
+    from
+        Instructor i1_0 
+    where
+        i1_0.id=?
+Hibernate: 
+    select
+        i1_0.id,
+        i1_0.email,
+        i1_0.name 
+    from
+        Instructor i1_0 
+    where
+        i1_0.id=?
+Hibernate: 
+    select
+        i1_0.id,
+        i1_0.email,
+        i1_0.name 
+    from
+        Instructor i1_0 
+    where
+        i1_0.id=?
+Hibernate: 
+    select
+        i1_0.id,
+        i1_0.email,
+        i1_0.name 
+    from
+        Instructor i1_0 
+    where
+        i1_0.id=?
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateAndReadCourse" classname="org.example.service.CourseServiceTest" time="0.07">
+    <system-out><![CDATA[Hibernate: 
+    select
+        i1_0.id,
+        i1_0.email,
+        i1_0.name 
+    from
+        Instructor i1_0 
+    where
+        i1_0.id=?
+Hibernate: 
+    insert 
+    into
+        Course
+        (description, instructor_id, title) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        i1_0.id,
+        i1_0.email,
+        i1_0.name,
+        c1_0.title 
+    from
+        Course c1_0 
+    left join
+        Instructor i1_0 
+            on i1_0.id=c1_0.instructor_id 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        i1_0.id,
+        i1_0.email,
+        i1_0.name,
+        c1_0.title 
+    from
+        Course c1_0 
+    left join
+        Instructor i1_0 
+            on i1_0.id=c1_0.instructor_id 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        e1_0.course_id,
+        e1_0.id,
+        e1_0.enrollment_date,
+        e1_0.student_name 
+    from
+        Enrollment e1_0 
+    where
+        e1_0.course_id=?
+Hibernate: 
+    delete 
+    from
+        Course 
+    where
+        id=?
+]]></system-out>
+  </testcase>
+  <testcase name="testSearchCourse" classname="org.example.service.CourseServiceTest" time="0.057">
+    <system-out><![CDATA[Hibernate: 
+    select
+        c1_0.id,
+        c1_0.description,
+        c1_0.instructor_id,
+        c1_0.title 
+    from
+        Course c1_0 
+    where
+        c1_0.title like ? escape ''
+Hibernate: 
+    select
+        i1_0.id,
+        i1_0.email,
+        i1_0.name 
+    from
+        Instructor i1_0 
+    where
+        i1_0.id=?
+]]></system-out>
+  </testcase>
+</testsuite>

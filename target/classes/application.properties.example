@@ -1,0 +1,6 @@
+# Config Example
+
+db.driver=com.mysql.cj.jdbc.Driver
+db.url=jdbc:mysql://localhost:3306/your_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+db.username=your_username
+db.password=your_password

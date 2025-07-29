@@ -6,7 +6,7 @@
     <groupId>com.example</groupId>
     <artifactId>blogapp</artifactId>
     <version>1.0.0</version>
-    <packaging>war</packaging> <!-- 👈 CHUYỂN THÀNH WAR -->
+    <packaging>war</packaging> 
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -80,7 +80,7 @@
     </dependencies>
 
     <build>
-        <finalName>blogapp</finalName> <!-- tên file war sẽ sinh ra -->
+        <finalName>blogapp</finalName> 
         <plugins>
             <!-- Maven Compiler -->
             <plugin>

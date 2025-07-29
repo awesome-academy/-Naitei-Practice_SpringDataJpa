@@ -6,13 +6,13 @@ Practice Spring data Jpa \& Spring core
 
 
 
-\## Giới thiệu
+\1 Giới thiệu
 
 Đây là một dự án Spring Framework nhỏ minh họa cách cấu hình và sử dụng Spring Data JPA (với Hibernate) để tương tác với cơ sở dữ liệu MySQL. Dự án này bao gồm các lớp Entity, Repository, Service và cấu hình Spring Java-based kết hợp XML config
 
 
 
-\## Mục tiêu chính của dự án
+\2 Mục tiêu chính của dự án
 
 \* Cấu hình Spring Application Context bằng Java-based Configuration (`@Configuration`).
 
@@ -24,7 +24,7 @@ Practice Spring data Jpa \& Spring core
 
 
 
-\## Công nghệ sử dụng
+\3 Công nghệ sử dụng
 
 \* \*\*Spring Framework:\*\* Core, Context, Data JPA, ORM, Aspects
 
@@ -36,7 +36,7 @@ Practice Spring data Jpa \& Spring core
 
 
 
-\## Cấu trúc dự án
+\4 Cấu trúc dự án
 
 ├── src/
 
@@ -92,6 +92,9 @@ Practice Spring data Jpa \& Spring core
 
 \* IDE như IntelliJ IDEA hoặc Eclipse
 
+\5 Mô tả database
+\Bảng Employee: gồm thông tin nhân viên, 1 nhân viên có nhiều lịch chấm công
+\Bảng Attendance: gồm thông tin lịch chấm công, chỉ thuộc về 1 nhân viên
 
 
 \### Các bước cài đặt

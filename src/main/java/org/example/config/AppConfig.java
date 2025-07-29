@@ -16,16 +16,17 @@ import java.util.Properties;
 @Configuration
 @ComponentScan(basePackages = "org.example.service")
 @EnableJpaRepositories(basePackages = "org.example.repository")
+@PropertySource("classpath:application.properties")
 @EnableTransactionManagement
 public class AppConfig {
 
     @Bean
-    public DataSource dataSource() {
+    public DataSource dataSource(org.springframework.core.env.Environment env) {
         DriverManagerDataSource ds = new DriverManagerDataSource();
-        ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/elearning_test?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC");
-        ds.setUsername("root");
-        ds.setPassword("123456788");
+        ds.setDriverClassName(env.getProperty("db.driver"));
+        ds.setUrl(env.getProperty("db.url"));
+        ds.setUsername(env.getProperty("db.username"));
+        ds.setPassword(env.getProperty("db.password"));
         return ds;
     }
 

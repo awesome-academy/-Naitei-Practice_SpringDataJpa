@@ -12,8 +12,10 @@ public class Enrollment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name="student_name")
     private String studentName;
 
+    @Column(name="enrollment_date")
     private LocalDate enrollmentDate;
 
     @ManyToOne

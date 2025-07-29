@@ -1,43 +1,21 @@
 package org.example.service;
 
 import org.example.entity.Course;
-import org.example.repository.CourseRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.example.entity.Instructor;
 
 import java.util.List;
-import java.util.Optional;
 
-@Service
-public class CourseService {
+public interface CourseService {
 
-    @Autowired
-    private CourseRepository courseRepository;
+    Course saveCourse(Course course);
 
-    // Cap nhat db
-    public Course saveCourse(Course course) {
-        return courseRepository.save(course);
-    }
+    Course getCourseById(Long id);
 
-    // Check course
-    public Course getCourseById(Long id) {
-        Optional<Course> optional = courseRepository.findById(id);
-        return optional.orElse(null);
-    }
+    List<Course> getAllCourses();
 
-    // lay toan bo coure
-    public List<Course> getAllCourses() {
-        return courseRepository.findAll();
-    }
+    void deleteCourseById(Long id);
 
-    // xoa course theo Id
-    public void deleteCourseById(Long id) {
-        courseRepository.deleteById(id);
-    }
+    List<Course> searchCoursesByTitle(String keyword);
 
-    // tim course theo keyword title
-    public List<Course> searchCoursesByTitle(String keyword) {
-        return courseRepository.searchByTitleKeyword(keyword);
-    }
-
+    Instructor getInstructorById(Long id);
 }

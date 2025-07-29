@@ -1,4 +1,4 @@
-package org.example.config;
+/*package org.example.config;
 
 
 
@@ -28,4 +28,4 @@ public class WebConfig implements WebMvcConfigurer {
 
         converters.add(converter);
     }
-}
+}*/

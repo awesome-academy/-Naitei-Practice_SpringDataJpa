@@ -1,4 +1,4 @@
-package org.example.service.book;
+package org.example.service.impl;
 
 public class BookServiceImpl {
 }

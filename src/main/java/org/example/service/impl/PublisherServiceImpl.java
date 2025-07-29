@@ -1,4 +1,4 @@
-package org.example.service.publisher;
+package org.example.service.impl;
 
 public class PublisherServiceImpl {
 }

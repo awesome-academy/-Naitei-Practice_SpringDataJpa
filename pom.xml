@@ -21,12 +21,14 @@
             <version>8.0.33</version>
         </dependency>
 
-        <!-- Hibernate 7 (supports jakarta.persistence) -->
+
         <dependency>
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>7.0.6.Final</version>
+            <version>6.4.4.Final</version>
         </dependency>
+
+
 
         <!-- Spring Core Context -->
         <dependency>
@@ -108,12 +110,23 @@
             <artifactId>jackson-annotations</artifactId>
             <version>2.17.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jdk8</artifactId>
+            <version>2.17.1</version>
+        </dependency>
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>2.0.12</version>
         </dependency>
-
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
     </dependencies>
 
 </project>

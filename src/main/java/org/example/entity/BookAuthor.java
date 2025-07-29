@@ -6,8 +6,9 @@ import jakarta.persistence.*;
 @Table(name = "book_author")
 public class BookAuthor {
 
-    @EmbeddedId
-    private BookAuthorId id ;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id ;
 
     @ManyToOne
     @JoinColumn(name = "book_id")
@@ -17,11 +18,12 @@ public class BookAuthor {
     @JoinColumn(name = "author_id")
     private Author author;
 
-    public BookAuthorId getId() {
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(BookAuthorId id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -1,7 +1,6 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
-
 import java.util.List;
 
 @Entity
@@ -9,58 +8,37 @@ import java.util.List;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
+
     private String title;
 
     @ManyToOne
     @JoinColumn(name = "publisher_id")
     private Publisher publisher;
 
-    @ManyToMany
-    @JoinTable(
-            name = "book_author",
-            joinColumns = @JoinColumn(name = "book_id"),
-            inverseJoinColumns = @JoinColumn(name = "author_id")
-    )
-    private List<Author> authors;
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<BookAuthor> bookAuthors;
+
     public Book () {}
-    public Book( String title, Publisher publisher, List<Author> authors) {
+
+    public Book(String title, Publisher publisher) {
         this.title = title;
         this.publisher = publisher;
-        this.authors = authors;
     }
 
-    public Long getId() {
-        return id;
-    }
+    public Long getId() { return id; }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public void setId(Long id) { this.id = id; }
 
-    public String getTitle() {
-        return title;
-    }
+    public String getTitle() { return title; }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public void setTitle(String title) { this.title = title; }
 
-    public Publisher getPublisher() {
-        return publisher;
-    }
+    public Publisher getPublisher() { return publisher; }
 
-    public void setPublisher(Publisher publisher) {
-        this.publisher = publisher;
-    }
+    public void setPublisher(Publisher publisher) { this.publisher = publisher; }
 
-    public List<Author> getAuthors() {
-        return authors;
-    }
+    public List<BookAuthor> getBookAuthors() { return bookAuthors; }
 
-    public void setAuthors(List<Author> authors) {
-        this.authors = authors;
-    }
-
+    public void setBookAuthors(List<BookAuthor> bookAuthors) { this.bookAuthors = bookAuthors; }
 }

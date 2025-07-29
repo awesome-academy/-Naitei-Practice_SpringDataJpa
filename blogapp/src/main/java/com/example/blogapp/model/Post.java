@@ -1,5 +1,5 @@
 package com.example.blogapp.model;
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 public class Post {

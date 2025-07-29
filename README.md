@@ -39,4 +39,14 @@ Xây dựng project Java không dùng Spring Boot, sử dụng **Spring Core + S
 - Sử dụng Spring Data JPA để thao tác với DB thông qua interface `BookRepository`.
 
 
+**Demo**:
+<img width="865" height="300" alt="image" src="https://github.com/user-attachments/assets/92ba5295-2c11-43c2-b714-c332aa9a20ac" />
+<img width="1041" height="284" alt="image" src="https://github.com/user-attachments/assets/cbe87216-2920-467d-b1e7-ddb3a31964d0" />
+<img width="929" height="698" alt="image" src="https://github.com/user-attachments/assets/cf65e47a-eaa1-4b9c-92e1-0e093e21fec9" />
+<img width="907" height="352" alt="image" src="https://github.com/user-attachments/assets/c30ba694-29f4-4603-9d38-efc42b7d3edd" />
+<img width="1023" height="655" alt="image" src="https://github.com/user-attachments/assets/8855c490-e966-4a07-a5a6-35a78332888e" />
 
+
+
+
+ 

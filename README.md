@@ -23,7 +23,7 @@ erDiagram
         bigint id PK
         varchar name
     }
-    osuppliers ||--o{ products : "cung cấp"
+    suppliers ||--o{ products : "cung cấp"
 
 ```
 **1.Product**

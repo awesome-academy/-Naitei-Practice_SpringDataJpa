@@ -1,0 +1,14 @@
+# ===================================================
+# =        EXAMPLE DATABASE CONFIGURATION           =
+# ===================================================
+
+# MySQL Database Connection Example
+db.driver=com.mysql.cj.jdbc.Driver
+db.url=jdbc:mysql://localhost:3306/your_db_name?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+db.username=your_mysql_username
+db.password=your_mysql_password
+
+# Hibernate Properties for MySQL
+hibernate.hbm2ddl.auto=update
+hibernate.show_sql=false
+hibernate.format_sql=true

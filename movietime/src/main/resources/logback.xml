@@ -1,0 +1,25 @@
+<configuration>
+
+    <!-- Định nghĩa nơi xuất là Console -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Định dạng của mỗi dòng log -->
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Cấu hình mức độ log cho các package cụ thể -->
+    
+    <!-- CHO HIBERNATE: Chỉ hiển thị các log từ mức WARN trở lên -->
+    <logger name="org.hibernate" level="WARN"/>
+    
+    <!-- CHO SPRING: Chỉ hiển thị các log từ mức WARN trở lên -->
+    <logger name="org.springframework" level="WARN"/>
+
+    <!-- Cấu hình root: Áp dụng cho tất cả các package khác -->
+    <!-- Mọi thứ khác sẽ hiển thị từ mức WARN trở lên -->
+    <root level="WARN">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>

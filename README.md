@@ -31,6 +31,7 @@ erDiagram
 * name: String
 * price: double
 * supplier_id: long
+
 **2.Supplier**
 * id: long
 * name: String

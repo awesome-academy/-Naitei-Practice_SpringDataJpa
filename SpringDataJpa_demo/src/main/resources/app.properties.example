@@ -1,0 +1,6 @@
+name=nghiaduong
+
+spring.datasource.driver=
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=

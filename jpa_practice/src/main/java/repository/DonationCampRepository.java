@@ -1,6 +1,6 @@
 package repository;
 
 import entity.DonationCamp;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface DonationCampRepository extends JpaRepository<DonationCamp, Long> { }
+public interface DonationCampRepository extends CrudRepository<DonationCamp, Long> { }

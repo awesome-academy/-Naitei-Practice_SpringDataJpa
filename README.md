@@ -58,10 +58,6 @@ properties
 
 ### Build & Chạy ứng dụng
 
-1. Clone repository:
-    
-    git clone https://github.com/nguyenbaduy011/-Naitei-Practice_SpringDataJpa.git
-    cd -Naitei-Practice_SpringDataJpa
     
 
 2. Chạy ứng dụng:

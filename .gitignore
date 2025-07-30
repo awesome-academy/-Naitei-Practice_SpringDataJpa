@@ -1,3 +1,8 @@
+# Ignore database properties file (contains sensitive data)
+main/resources/database.properties
+# Ignore target directory (compiled files and .war)
+target/
+
 # Compiled class file
 *.class
 
@@ -22,3 +27,4 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+

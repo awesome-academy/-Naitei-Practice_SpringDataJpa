@@ -1,0 +1,7 @@
+com/naiteipractice/springdatajpa/service/BookService.class
+com/naiteipractice/springdatajpa/controller/BookController.class
+com/naiteipractice/springdatajpa/entity/Book.class
+com/naiteipractice/springdatajpa/config/AppConfig.class
+com/naiteipractice/springdatajpa/service/impl/BookServiceImpl.class
+com/naiteipractice/springdatajpa/config/WebConfig.class
+com/naiteipractice/springdatajpa/repository/BookRepository.class

@@ -1,0 +1,7 @@
+/home/lyan/-Naitei-Practice_SpringDataJpa/src/main/java/com/naiteipractice/springdatajpa/config/AppConfig.java
+/home/lyan/-Naitei-Practice_SpringDataJpa/src/main/java/com/naiteipractice/springdatajpa/repository/BookRepository.java
+/home/lyan/-Naitei-Practice_SpringDataJpa/src/main/java/com/naiteipractice/springdatajpa/service/impl/BookServiceImpl.java
+/home/lyan/-Naitei-Practice_SpringDataJpa/src/main/java/com/naiteipractice/springdatajpa/controller/BookController.java
+/home/lyan/-Naitei-Practice_SpringDataJpa/src/main/java/com/naiteipractice/springdatajpa/service/BookService.java
+/home/lyan/-Naitei-Practice_SpringDataJpa/src/main/java/com/naiteipractice/springdatajpa/config/WebConfig.java
+/home/lyan/-Naitei-Practice_SpringDataJpa/src/main/java/com/naiteipractice/springdatajpa/entity/Book.java

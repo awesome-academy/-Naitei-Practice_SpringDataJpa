@@ -58,10 +58,9 @@ properties
 
 ### Build & Chạy ứng dụng
 
-
     
 
- Chạy ứng dụng:
+2. Chạy ứng dụng:
     
     mvn clean compile tomcat7:run
     
@@ -124,3 +123,21 @@ GET /books/by-year?year=2000
 
 GET /books/by-price-range?minPrice=20&maxPrice=50
 
+## Cấu trúc dự án
+
+src/
+├── main/
+│   ├── java/
+│   │   └── com/naiteipractice/springdatajpa/
+│   │       ├── config/          # Cấu hình Spring
+│   │       ├── controller/      # REST Controllers
+│   │       ├── entity/          # JPA Entities
+│   │       ├── repository/      # Spring Data JPA Repositories
+│   │       └── service/         # Business Logic
+│   ├── resources/
+│   │   ├── applicationContext.xml  # Spring configuration
+│   │   ├── db.properties           # Database configuration
+│   │   └── logback.xml            # Logging configuration
+│   └── webapp/
+│       └── WEB-INF/
+│           └── web.xml            # Web configuration

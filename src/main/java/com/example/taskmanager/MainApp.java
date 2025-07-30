@@ -9,6 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Scanner;
 
 public class MainApp {
     public static void main(String[] args) {
@@ -18,44 +19,88 @@ public class MainApp {
         TaskService taskService = context.getBean(TaskService.class);
         CategoryService categoryService = context.getBean(CategoryService.class);
 
-        // Tạo dữ liệu mẫu cho Category
-        Category school = new Category("Trường học");
-        Category work = new Category("Công việc");
-        Category volunteer = new Category("Tình nguyện");
+        // Tạo dữ liệu mẫu nếu chưa có
+        if (categoryService.getAllCategories().isEmpty()) {
+            categoryService.createCategory(new Category("Trường học"));
+            categoryService.createCategory(new Category("Công việc"));
+            categoryService.createCategory(new Category("Tình nguyện"));
+        }
 
-        categoryService.createCategory(school);
-        categoryService.createCategory(work);
-        categoryService.createCategory(volunteer);
+        Scanner scanner = new Scanner(System.in);
+        boolean running = true;
 
-        // Tạo Task và gán Category
-        Task task1 = new Task("Học Spring", "Đọc tài liệu Spring JPA", "NEW", LocalDate.now().plusDays(3));
-        task1.setCategory(school);
+        while (running) {
+            System.out.println("\n===== QUẢN LÝ TASK =====");
+            System.out.println("1. Xem tất cả Task");
+            System.out.println("2. Tạo Task mới");
+            System.out.println("3. Xoá Task theo ID");
+            System.out.println("4. Xem danh sách Category");
+            System.out.println("0. Thoát");
+            System.out.print("Chọn: ");
+            String choice = scanner.nextLine();
 
-        Task task2 = new Task("Viết báo cáo", "Tổng hợp kết quả project", "IN_PROGRESS", LocalDate.now().plusDays(5));
-        task2.setCategory(work);
+            switch (choice) {
+                case "1":
+                    List<Task> tasks = taskService.getAllTasks();
+                    if (tasks.isEmpty()) {
+                        System.out.println("Chưa có task nào.");
+                    } else {
+                        tasks.forEach(System.out::println);
+                    }
+                    break;
 
-        Task task3 = new Task("Kiểm tra code", "Code review cho bạn cùng nhóm", "PENDING", LocalDate.now().plusDays(2));
-        task3.setCategory(work);
+                case "2":
+                    System.out.print("Tiêu đề: ");
+                    String title = scanner.nextLine();
 
-        Task task4 = new Task("Tham gia chiến dịch", "Phát quà cho trẻ em vùng cao", "NEW", LocalDate.now().plusDays(7));
-        task4.setCategory(volunteer);
+                    System.out.print("Mô tả: ");
+                    String description = scanner.nextLine();
 
-        // Lưu các task vào cơ sở dữ liệu
-        taskService.createTask(task1);
-        taskService.createTask(task2);
-        taskService.createTask(task3);
-        taskService.createTask(task4);
+                    System.out.print("Trạng thái (NEW, IN_PROGRESS, PENDING): ");
+                    String status = scanner.nextLine();
 
-        // Hiển thị danh sách task
-        System.out.println("Danh sách Task:");
-        List<Task> tasks = taskService.getAllTasks();
-        tasks.forEach(System.out::println);
+                    System.out.print("Hạn chót (YYYY-MM-DD): ");
+                    String dueDateStr = scanner.nextLine();
+                    LocalDate dueDate = LocalDate.parse(dueDateStr);
 
-        // Hiển thị danh sách category
-        System.out.println("\nDanh sách Category:");
-        List<Category> categories = categoryService.getAllCategories();
-        categories.forEach(System.out::println);
+                    System.out.println("Chọn Category:");
+                    List<Category> categories = categoryService.getAllCategories();
+                    for (int i = 0; i < categories.size(); i++) {
+                        System.out.println((i + 1) + ". " + categories.get(i).getName());
+                    }
+                    System.out.print("Số thứ tự: ");
+                    int catIndex = Integer.parseInt(scanner.nextLine()) - 1;
+                    Category selectedCategory = categories.get(catIndex);
+
+                    Task newTask = new Task(title, description, status, dueDate);
+                    newTask.setCategory(selectedCategory);
+                    taskService.createTask(newTask);
+
+                    System.out.println("Đã tạo Task.");
+                    break;
+
+                case "3":
+                    System.out.print("Nhập ID task muốn xoá: ");
+                    Long idToDelete = Long.parseLong(scanner.nextLine());
+                    taskService.deleteTask(idToDelete);
+                    System.out.println("Đã xoá Task (nếu tồn tại).");
+                    break;
+
+                case "4":
+                    List<Category> allCategories = categoryService.getAllCategories();
+                    allCategories.forEach(System.out::println);
+                    break;
+
+                case "0":
+                    running = false;
+                    break;
+
+                default:
+                    System.out.println("Lựa chọn không hợp lệ.");
+            }
+        }
 
         context.close();
+        System.out.println("Chương trình đã thoát.");
     }
 }
